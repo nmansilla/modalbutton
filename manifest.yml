@@ -1,0 +1,19 @@
+modules:
+  jira:issuePanel:
+    - key: modalbutton-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: modalbutton
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/80d53165-6797-4195-b7be-ebc7de0cdce4
